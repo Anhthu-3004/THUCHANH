@@ -7,7 +7,7 @@ const app = express()
 const port = process.env.PORT
 viewEngine (app)
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.render("home")
 })
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
@@ -16,7 +16,7 @@ app.get('/ejs', (req, res) => {
     res.render("test")
 })
 app.get('/about', (req, res) => {
-    res.send('Hello World!. Page about')
+    res.render("about")
 })
 app.get('/date', (req, res) => {
     res.send(myDateTime())
