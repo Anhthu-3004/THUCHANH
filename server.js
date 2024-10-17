@@ -7,7 +7,7 @@ const app = express()
 const port = process.env.PORT
 viewEngine (app)
 app.get('/', (req, res) => {
-    res.render("home")
+    res.render("home.ejs")
 })
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
